@@ -1,9 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".signUp">
+    tools:context=".signUp"
+    android:background="@drawable/imgbg">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <TextView
+
+                android:layout_margin="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign up for Documento"
+                android:textSize="20dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+           <EditText
+               android:id="@+id/fname"
+               android:layout_width="300dp"
+               android:layout_height="50dp"
+               android:hint="full name"
+               />
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:hint="email adress"
+                />
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:hint="password"
+                android:inputType="textPassword"
+                />
+            <EditText
+                android:id="@+id/pno"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:hint="phone number"
+                android:inputType="number"
+                />
+            <Button
+                android:onClick="submit"
+                android:layout_gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button_bg_transparent"
+                android:text="Submit"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
