@@ -1,5 +1,6 @@
 package blurb.documenta;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -43,6 +44,7 @@ public class registerUser extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
                                 Toast.makeText(registerUser.this,"You are Logged in",Toast.LENGTH_SHORT).show();
+                                home();
 
 
                             }else
@@ -59,8 +61,14 @@ public class registerUser extends AppCompatActivity {
 
 
         }
-        public void register(View view){
 
+    private void home() {
+        Intent registerUser =new Intent(blurb.documenta.registerUser.this,home.class);
+
+    }
+
+    public void register(View view){
+Intent signUp= new Intent(registerUser.this, signUp.class);
         }
 
 }
