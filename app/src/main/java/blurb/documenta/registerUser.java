@@ -1,5 +1,6 @@
 package blurb.documenta;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -18,6 +19,7 @@ public class registerUser extends AppCompatActivity {
     EditText username,passwordd;
     Button login,register;
     private FirebaseAuth mAuth;
+    ProgressDialog progressbar;
 
 
 
@@ -31,20 +33,26 @@ public class registerUser extends AppCompatActivity {
         passwordd=findViewById(R.id.password);
         login=findViewById(R.id.login);
         register=findViewById(R.id.register);
+        progressbar = new ProgressDialog(this);
         }
+
 
 
         public void login(View view){
         final String email=username.getText().toString().trim();
         final String pwd=passwordd.getText().toString().trim();
+        progressbar.setMessage("Loging in");
+        progressbar.show();
             mAuth = FirebaseAuth.getInstance();
             mAuth.signInWithEmailAndPassword(email,pwd)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
+                                progressbar.dismiss();
                                 Toast.makeText(registerUser.this,"You are Logged in",Toast.LENGTH_SHORT).show();
                                 home();
+
 
 
                             }else

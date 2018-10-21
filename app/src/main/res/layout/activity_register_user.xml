@@ -49,6 +49,7 @@
         android:text="Login"
         android:background="@drawable/button_bg_transparent"
         android:padding="15dp"
+
         />
     <Button
         android:onClick="register"
