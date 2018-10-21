@@ -17,8 +17,12 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class signUp extends AppCompatActivity {
     EditText fullname,emailadd,pwd,phoneno;
-    Button submit;
+    Button submitt;
     private FirebaseAuth mAuth;
+
+
+
+
 
 
     @Override
@@ -30,6 +34,11 @@ public class signUp extends AppCompatActivity {
         emailadd=findViewById(R.id.email);
         pwd=findViewById(R.id.password);
         phoneno=findViewById(R.id.pno);
+        submitt=findViewById(R.id.submit);
+
+
+
+
         }
         public void submit(View view){
         final String name = fullname.getText().toString().trim();
@@ -57,6 +66,7 @@ public class signUp extends AppCompatActivity {
 
     private void loin() {
         Intent login =new Intent(this,registerUser.class);
+        startActivity(login);
 
     }
 }

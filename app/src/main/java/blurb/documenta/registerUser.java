@@ -64,11 +64,13 @@ public class registerUser extends AppCompatActivity {
 
     private void home() {
         Intent registerUser =new Intent(blurb.documenta.registerUser.this,home.class);
+        startActivity(registerUser);
 
     }
 
     public void register(View view){
 Intent signUp= new Intent(registerUser.this, signUp.class);
+startActivity(signUp);
         }
 
 }
