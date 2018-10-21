@@ -33,6 +33,8 @@
 
 
         <ImageButton
+            android:id="@+id/cam"
+            android:onClick="camera"
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:layout_alignParentBottom="true"
