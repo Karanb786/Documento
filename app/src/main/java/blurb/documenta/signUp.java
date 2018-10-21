@@ -64,26 +64,32 @@ public class signUp extends AppCompatActivity {
         if(name.isEmpty()){
             efullname.setError("Please Fill name");
             efullname.requestFocus();
+            return;
         }
         if(email.isEmpty()){
             eemail.setError("Please Fill email");
             eemail.requestFocus();
+            return;
         }
         if(password.isEmpty()){
             epassword.setError("Please Fill password");
             epassword.requestFocus();
+            return;
         }
         if(phno.isEmpty()){
             ephone.setError("Please Fill phone number");
             ephone.requestFocus();
+            return;
         }
         if(password.length()<6){
             epassword.setError("Password is too short");
             epassword.requestFocus();
+            return;
         }
         if(phno.length()!=10){
             ephone.setError("Please enter valid phone number");
             ephone.requestFocus();
+            return;
         }
         progressBar.setTitle("Creating account");
         progressBar.setMessage("Please wait while we create your account");
