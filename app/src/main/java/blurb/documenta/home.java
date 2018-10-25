@@ -1,5 +1,6 @@
 package blurb.documenta;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -16,9 +17,8 @@ public class home extends AppCompatActivity {
     private StorageReference mStorageRef;
     String mCurrentPhotoPath;
     FirebaseAuth mAuth;
-    private static final int gly_intent=2;
-
-
+    private static final int gly_intent = 2;
+    ProgressDialog progressBar;
 
 
     @Override
@@ -27,26 +27,24 @@ public class home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
 
-
         mStorageRef = FirebaseStorage.getInstance().getReference();
-        came=findViewById(R.id.cam);
+        came = findViewById(R.id.cam);
+        progressBar = new ProgressDialog(this);
         came.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent takePictureIntent = new Intent(Intent.ACTION_PICK);
-                takePictureIntent.setType("image/*");
-                startActivityForResult(takePictureIntent,gly_intent);
-
-                }
-
+                Intent in = new Intent(home.this,uploadimg.class);
+                startActivity(in);
+                finish();
+            }
         });
 
-
-
-
     }
+}
 
 
-    }
+
+
+
 
 

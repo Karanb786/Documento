@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".uploadimg"
+    android:orientation="vertical"
+    android:background="@drawable/imgbg"
+    android:padding="9dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/choseimg"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:text="Choose Image"
+            android:background="@drawable/button_bg_transparent"/>
+        <EditText
+            android:id="@+id/entername"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Enter name"/>
+
+
+    </LinearLayout>
+    
+    <ImageView
+        android:id="@+id/viewimg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="180dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="197dp"
+        android:background="#7c899e"></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:orientation="horizontal"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginBottom="40dp">
+    <Button
+        android:id="@+id/uploadimg"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_bg_transparent"
+        android:gravity="center"
+        android:text="Upload"/>
+        <TextView
+            android:id="@+id/showuploads"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Show Uploads"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</RelativeLayout>
